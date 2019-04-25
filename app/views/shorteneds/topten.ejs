@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Top 10</title>
+		</head>
+	<body>
+
+		<h1>Top 10</h1>
+
+		<table>
+			
+			<tr>
+				<td>URL</td>
+				<td>Alias</td>
+				<td>Clicks</td>
+			</tr>
+
+			<% for(var i = 0; i < 9; i++){ %>
+				<tr>
+					<td><%= shorteneds[i].url %></td>
+					<td><%= shorteneds[i].alias %></td>
+					<td><%= shorteneds[i].clicks %></td>
+				</tr>
+			<% } %>
+
+		</table>
+		
+		<h5>Tempo de execução:  <%= time%> milliseconds</h5>
+	</body>
+</html>
