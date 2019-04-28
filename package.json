@@ -1,19 +1,20 @@
 {
-  "name": "portal_noticias",
+  "name": "bemobi_encurtador",
   "version": "1.0.0",
-  "description": "Site de notícias",
-  "main": "noticias.js",
+  "description": "Encurtador de URL",
+  "main": "home.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Claudio Junior",
-  "license": "ISC",
+  "author": "Lucas Liu",
+  "license": "",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "bootstrap": "^4.3.1",
     "consign": "^0.1.6",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
-    "express-validator": "^5.3.1",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "protractor": "^5.4.2"
   }
 }

@@ -3,7 +3,7 @@ module.exports = function(application){
       res.render('shorteneds/retrieve');
   });
 
-  application.post('/retrieve/access', function(req,res){
+  application.post('/retrieve/access', function(req,res){                   //faz a requisição utilizando o link encurtado e redireciona para a url
     var alias = req.body;
    
     var connection = application.config.dbConnection();
@@ -11,8 +11,8 @@ module.exports = function(application){
 
 
 
-    function fetchUrl(alias, callback){
-    	shortenedModel.checkAlias(alias, function(error, rows){
+    function fetchUrl(alias, callback){                                    // salva a url em uma variavel, caso exista e adiciona +1 a contagem de acessos da mesma
+    	shortenedModel.checkAlias(alias, function(error, rows){              
     		if(error){
           
     			callback(error, null);
@@ -22,10 +22,10 @@ module.exports = function(application){
       			shortenedModel.addClick(alias, function(error, result){
 
             });
-      			callback(null, rows[0].url);
+      			callback(null, rows[0].url);                    
           }else{
 
-            res.send('ERR_CODE: 002, Description:SHORTENED URL NOT FOUND');
+            res.send('ERR_CODE: 002, Description:SHORTENED URL NOT FOUND');       //mostra pagina com o erro codigo 002
           }
     		}
 
@@ -35,7 +35,7 @@ module.exports = function(application){
    
 
     fetchUrl(alias, function(error, content){
-      res.redirect('http://' + content);
+      res.redirect('http://' + content);                    //redireciona para a url desejada
 
     })
   });

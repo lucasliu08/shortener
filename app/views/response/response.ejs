@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-<table>
-	<tr>
-		<td>URL</td>
-		<td>/</td>
-		<td>Seu link encurtado</td>
-	</tr>
-	
-	<tr>
-		<td>http://<%= shorteneds[0].url %></td>
-		<td>/<td>
-		<td><%= shorteneds[0].alias %></td>
-	</tr>
-	
-	<br/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-	<h3>Tempo de execução:  <%= time%> milliseconds</h3>
-</table>
-</body>
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<style type="text/css">
+	
+		body{
+			background-image: url(http://electrolight.com/wp-content/uploads/2016/02/Hire-Me-istockphoto-1920x1080.jpg);
+		}
+
+		h1{
+			margin-left: 250px;
+			margin-top: 150px;
+			margin-bottom: 20px;
+			font-family: Lora, serif;
+		}
+
+		div{
+			background: silver;
+			opacity: 0.95;
+		}
+
+		.submit-button {
+   			 background-color: #7CD5CC;
+   			 padding: 10px;
+   			 margin: 20px 0px 30px 460px;
+   			 width: 125px;
+   			 border-radius: 10px;
+   			
+  		}
+
+  		.cancel-button {
+   			 background-color: #D83441;
+   			 padding: 5px;
+   			 width: 105px;
+   			 border-radius: 10px;
+  		}
+
+  		.text-margin{
+  			margin-left: 200px;
+  		}
+  		
+  		.text-larger{
+  			font-size: 50px;
+  		}
+
+
+  		.url-text-input{
+  			width: 600px;
+  			height: 2em;
+  			border-radius: 10px;
+  		}
+
+  		#alias{
+  			margin-top: 10px;
+  			margin-left: 140px;
+
+  		}
+	</style>
+
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			
+		
+			<h2 id="url-encurtado">Url original: http://<%= shorteneds[0].url %></h3>
+			
+			<h2 id="alias-encurtado" class="bg-secondary">Link encurtado: <%= shorteneds[0].alias %></h3>
+	
+			
+			<br/>
+
+			<h3>Tempo de execução:  <%= time%> milliseconds</h3>
+			
+		</div>
+		<form action="/" method="get">
+				<button class="cancel-button" id="cancel-button"><-Back</button>
+		</form>
+	</body>
 </html>

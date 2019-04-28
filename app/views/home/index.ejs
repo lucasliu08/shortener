@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 	<html lang="pt-br">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<style type="text/css">
+		
+		body{
+			background-image: url(https://i.pinimg.com/originals/e4/5f/54/e45f54e2cc5516e2210c34453db5ab6e.jpg);	
+		}
+
+		h1{
+			margin-left: 340px;
+			margin-top: 170px;
+			font-size: 30px;
+			font-family: Lora, serif;
+		}
+
+		div{
+			background: silver;
+			
+			border-radius: 10px;
+			opacity: 0.95;
+		}
+
+		button{
+   			background-color: #5B9B95;
+   			padding: 30px;
+   			width: 300px;
+   			margin: 30px;
+   			border-radius: 10px;
+
+  		}
+  	
+  		.text-larger{
+  			font-size: 20px;
+  		}
+
+  		.topten{
+  			background-color: #EFF3A3;
+  		}
+
+
+	</style>
 		<head>
 			<meta charset="utf-8"/>
 			<title>Shortener Bemobi</title>
 		</head>
 	<body>
-
-		<h1>Bem vindo a página inicial</h1>
-		<br/>
-		<button onclick="window.location.href='/shortener'">Encurtador de URL</button>
-		<br/>
-		<button onclick="window.location.href='/topten'">TOP 10 urls mais acessadas</button>
-		<br/>
-		<button onclick="window.location.href='/retrieve'">Acessar URL encurtada</button>
-
+		<div class="container">
+			<h1>Bem vindo a página inicial</h1>
+			<div class="row">
+				<button id="button1" class="text-larger" onclick="window.location.href='/shortener'">Encurtador de URL</button>
+				<button id="button2" class="text-larger" onclick="window.location.href='/retrieve'">Acessar URL encurtada</button>
+				<button id="button3" class="text-larger topten" onclick="window.location.href='/topten'">TOP 10 urls mais acessadas</button>
+			</div>
+		</div>
 
 	</body>
 </html>

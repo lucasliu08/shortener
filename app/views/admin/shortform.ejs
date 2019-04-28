@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Formulário de encurtador de url</title>
-		</head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<style type="text/css">
+		
+		body{
+			background-image: url(https://i.pinimg.com/originals/e4/5f/54/e45f54e2cc5516e2210c34453db5ab6e.jpg);	
+		}
+
+		h1{
+			margin-left: 250px;
+			margin-top: 150px;
+			margin-bottom: 20px;
+			font-family: Lora, serif;
+		}
+
+		div{
+			background: silver;
+			opacity: 0.95;
+		}
+
+		.submit-button {
+   			 background-color: #7CD5CC;
+   			 padding: 10px;
+   			 margin: 20px 0px 30px 460px;
+   			 width: 125px;
+   			 border-radius: 10px;
+   			
+  		}
+
+  		.cancel-button {
+   			 background-color: #D83441;
+   			 padding: 5px;
+   			 width: 105px;
+   			 border-radius: 10px;
+  		}
+
+  		.text-margin{
+  			margin-left: 200px;
+  		}
+  		
+  		.text-larger{
+  			font-size: 20px;
+  		}
+
+
+  		.url-text-input{
+  			width: 600px;
+  			height: 2em;
+  			border-radius: 10px;
+  		}
+
+  		#alias{
+  			margin-top: 10px;
+  			margin-left: 140px;
+
+  		}
+		
+	</style>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Formulário de encurtador de url</title>
+	</head>
 	<body>
-
-		<h1>Encurtar url com custom alias</h1>
-		<br />
-
-		<form action="/shortener/custom" method="post">
-			<label>http://</label>
-			<input type="text" id="url" name="url" required/>
-			<br />
-			<label>Custom Alias</label>
-			<input type="text" id="alias" name="alias" required/>
-			<br />
-			<input type="submit" value="Enviar" />
+		<form action="/" method="get">
+			<button class="cancel-button"><-Back</button>
 		</form>
-		<br/>
+		<div class="container">
+					<h1>Encurtar url com custom alias</h1>
+					<br />
+					<form action="/shortener/custom" method="post">
+						<label class="text-margin">http://</label>
+						<input class="url-box url-text-input" type="text" id="urlcustom" name="url" required/>
+						<br />
+						<label class="text-margin">Custom Alias</label>
+						<input type="text" id="alias" name="alias" required/>
+						<br />
+						<input type="submit" id="button-submit1" value="Enviar" class="submit-button text-larger"/>
+					</form>
+				</div>
+			</div>
+		</div>
+			<br/>
 
-		<h1>Encurtar url sem custom alias</h1>
-		<form action="/shortener/random" method="post">
-			<label>http://</label>
-			<input type="text" id="url" name="url" required/>
-			<br />
-			<input type="submit" value="Enviar" />
-		</form>
+		<div class="container">
+					<h1>Encurtar url sem custom alias</h1>
+					<form action="/shortener/random" method="post">
+						<label class="text-margin">http://</label>
+						<input class="url-text-input" type="text" id="urlnocustom" name="url" required/>
+						<br />
+						<input type="submit" id="button-submit2" value="Enviar" class="submit-button text-larger"/>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		
 	</body>
 </html>
