@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS 'bemobi-lucasliu';
-USE 'bemobi-lucasliu';
+CREATE DATABASE IF NOT EXISTS bemobi-lucasliu;
+USE bemobi-lucasliu;
 
 CREATE TABLE shortened(
 	alias varchar(100) NOT NULL PRIMARY KEY,

@@ -5,7 +5,7 @@ var connMySQL = function(){
         host: 'localhost',
         user: 'root',
         password: 'password',
-        database: 'bemobi'
+        database: 'bemobi-lucasliu'
     });
 }
 
