@@ -1,4 +1,3 @@
-// An example configuration file.
 exports.config = {
   
   directConnect: true,
@@ -9,7 +8,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  // Framework to use. Jasmine is recommended.
+  // Framework to use. 
   framework: 'jasmine',
 
   // Spec patterns are relative to the current working directory when
